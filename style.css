@@ -1,0 +1,443 @@
+:root {
+    --color-button:orange;
+    --color-primary:white;
+    --color-secondary:black;
+    --font-primary:'Open Sans', sans-serif;
+    --font-header: 'Bebas Neue', cursive;
+    --font-size-content:1.8rem;
+    --font-size-head1:3.6rem;
+    --font-size-head2:2.4rem;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: var(--font-primary);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+/*page 1*/
+.head-wrapper{
+    background: url(assets/main-bg.jpg)no-repeat center center; 
+    /*-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; */
+    background-size: cover ;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+
+/* opening nav bar */
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    padding: 2.5rem;
+    background-color: rgba(19, 18, 18, 0.4);
+    font-size: 2rem;
+    width: 99.9%;
+    border: 4px solid green;
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 2.4rem;
+    width: 30%;
+    border: 4px solid black;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    border: 4px solid red;
+}
+
+.menu a{
+    text-decoration: none;
+
+}
+
+.login{
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+    border: 4px solid blue;
+    
+}
+
+/* responsive for navbar */
+@media screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        width: 100%;
+        height: 48vh;
+        padding: 1rem;
+
+    }
+    .logo{
+        padding: 0.5rem;
+        width: 100%;
+        height: 20%;
+        text-align: center;
+        margin-top: -1rem;
+    }
+    .menu{
+        width: 100%;
+        height: 50%;
+        flex-direction: column;
+        text-align: center;        
+    }
+    .login{
+
+        flex-direction: column;
+        width: 100%;
+        height: 30%;
+        text-align: center;
+    }
+    .list{
+        margin: 0.4rem;
+    }
+
+
+  }
+
+/* end of navbar */
+
+
+.playnow{
+    text-align: center;
+    font-family: var(--font-primary);
+    border: 4px solid red;
+
+}
+ 
+.playnow h1{
+    font-weight:bold;
+    font-size: 8rem;
+    font-family: var(--font-header);
+}
+
+.playnow h2{
+    font-weight:bold;
+    font-size: 3.6rem;
+    font-family: var(--font-header);
+}
+
+.btn-style{
+    padding: 2rem 6rem;
+    border-radius: 5px;
+    font-weight:  bold;
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+}
+
+.btn-color{
+    background-color: var(--color-button);
+    color: var(--color-secondary);
+    
+}
+
+.story{
+    text-align: center;
+    margin-bottom: 15px;
+    
+}
+.story span{
+    display: block;
+}
+
+/* responsive for content */
+@media screen and (max-width: 768px) {
+   .playnow h1{
+       font-size: 4rem;
+   }
+   .playnow h2{
+        font-size: 1.8rem;
+    }
+    
+  }
+
+/*page 2*/
+
+.game-wrapper{
+    background: url(assets/the-games-bg.jpg)no-repeat center center;
+    /*-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; */
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+
+.gametext{
+    display: inline-block;
+    justify-content: center;
+    margin-right: 1rem;
+    text-align: center;
+    border: 4px solid red;
+}
+
+.gametext p{
+    font-family: var(--font-primary);
+    font-size: var(--font-size-content);
+    margin-bottom: -1rem;
+}
+
+.gametext h2{
+    font-family: var(--font-header);
+    font-size: var(--font-size-head1);
+}
+
+#carouselExampleIndicators{
+    width: 100rem;
+}
+
+
+/* .banner-game{
+    border: 4px solid red;
+}
+
+.banner-indicator{
+    display: flex; 
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 2;
+}
+
+.prev-banner{
+    height: 5rem;
+    width: 3.5rem;
+    opacity: 0.8;
+    display: flex;
+    bottom: 19rem;
+    left: 0px;
+    z-index: 1;
+    background-color: transparent;
+    margin-left: -4.5rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.prev-banner img {
+    height:auto;
+    width: 100%;
+    
+}
+
+.next-banner{
+    height: 50px;
+    width: 35px;
+    opacity: 0.8;
+    display: flex;
+    bottom: 190px;
+    right: 0px;
+    z-index: 1;
+    background-color: transparent;
+    margin-right: -40px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+}
+.next-banner img{
+    height:auto;
+    width: 100%;
+    
+} */
+
+/* mobile screen size */
+@media (max-width: 768px){
+    .game-wrapper{
+        flex-direction: column;
+    }
+    .gametext{
+        font-size: 2.4rem;
+    }
+    .gametext p{
+        margin-bottom: -3.5rem;
+    }
+    #carouselExampleIndicators{
+        width: 90%;
+        height: auto;
+    }
+
+}
+/* tablet screen size */
+@media (min-width: 768px) and (max-width:1024px){
+    #carouselExampleIndicators{
+        width: 80%;
+        height: auto;
+    }
+}
+
+/* laptop 1024px - 1439px screen size */
+@media (min-width: 1024px) and (max-width:1440px){
+
+    #carouselExampleIndicators{
+        width: 70%;
+        height: auto;
+    }
+
+}
+
+/* opening page 3 */
+
+.game-feature{
+    background: url(assets/features.jpg)no-repeat center center; 
+    /*-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; */
+    background-size: cover ;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+.game-feature-empty{
+     display:flex;
+     height: 100%;
+     width: 50%;
+     border: 3px solid blue;
+}
+
+.game-feature-content{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid red;
+
+}
+
+/* ending page 3 */
+
+
+/* opening page 4 */
+.game-req{
+    background: url(assets/requirements.png)no-repeat center center; 
+    /*-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; */
+    background-size: cover ;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.game-req-header{
+    width: 100%;
+    border: 3px solid yellowgreen;
+    text-align: center;
+    font-size: var(--font-size-content);
+    color: var(--color-primary);
+    padding: 3rem;
+}
+
+.game-req-body{
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+}
+
+.game-req-content{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid brown;
+}
+
+.game-req-content h2{
+    font-family: var(--font-header);
+    font-size: 3.6rem;
+}
+
+.game-req-empty{
+    display:flex;
+    width: 50%;
+    border: 3px solid yellow;
+}
+
+.game-req-table-container{
+   
+    display:grid;
+    grid:auto auto auto / auto auto;
+    padding: 10px;
+    width: 40vw;
+    border: 3px solid violet;
+}
+
+.game-req-table-container > div {
+    font-size:var(--font-size-content);
+    padding: 30px 0;
+    border: 1px solid white;
+  }
+
+.box5{
+    grid-column:span 2;
+}
+
+.game-req-table-container span {
+    color: var(--color-button);
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .game-req-table-container{
+        width: 100%;
+        height: auto;
+    }
+     
+   }
+
+/* ending page 4 */
+
+/* opening page 5 */
+.top-score{
+    background:url(assets/top-score-bg.png)no-repeat center center; 
+    /*-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; */
+    background-size: cover ;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+
+
+}
+/* ending page 5 */
+
+
+
+/* opening page 6 */
+.newsletter{
+    background:black center center; 
+    /*-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; */
+    background-size: cover ;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+/* ending page 6 */
