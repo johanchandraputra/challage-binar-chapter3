@@ -162,6 +162,9 @@ html{
    .playnow h2{
         font-size: 1.8rem;
     }
+    .playnow button{
+        padding: 1.5rem 4.8rem;
+    }
     
   }
 
@@ -313,6 +316,33 @@ html{
      border: 3px solid blue;
 }
 
+.game-feature-content-header{
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+    align-items: center;
+}
+
+.game-feature-timeline{
+    display: flex;
+    flex-direction: row;
+    border: 3px solid orange;
+    width: 20%;
+    align-items: center;
+}
+
+.game-feature-content-text{
+    width: 80%;
+    border: 3px solid blue;
+}
+
+.game-feature-content-right{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 80%;
+}
+
 .game-feature-content{
     display: flex;
     flex-direction: column;
@@ -322,6 +352,15 @@ html{
     justify-content: center;
     border: 3px solid red;
 
+}
+@media screen and (max-width: 768px) {
+    .game-feature-content{
+            width: 100%;
+    }
+
+    .game-feature-empty{
+            width: 0%;
+    }
 }
 
 /* ending page 3 */
@@ -378,14 +417,14 @@ html{
    
     display:grid;
     grid:auto auto auto / auto auto;
-    padding: 10px;
-    width: 40vw;
+    padding: 0.5rem;
+    font-family: var(--font-primary);
     border: 3px solid violet;
 }
 
 .game-req-table-container > div {
     font-size:var(--font-size-content);
-    padding: 30px 0;
+    padding: 3rem;
     border: 1px solid white;
   }
 
@@ -399,13 +438,43 @@ html{
 }
 
 @media screen and (max-width: 768px) {
-    .game-req-table-container{
-        width: 100%;
-        height: auto;
-    }
-     
+
+        .game-req-empty{
+            width: 0%;
+        }
+        .game-req-content{
+            width: 100%;
+        }
+
+        .game-req-header{
+            padding: 1rem;
+            font-size: 1.4rem;
+            font-family: var(--font-primary);
+        }
+
+        .game-req-content h2{
+            font-size: 2.4rem;
+        }
+
+        .game-req-table-container > div {
+            font-size:1.2rem;
+            padding: 3rem 0;
+            border: 1px solid white;
+            font-family: var(--font-primary);
+          }
+
+        .game-req-table-container{
+            flex:80%;
+            width: 100%;
+            height: auto;
+        }
    }
 
+   @media screen and (max-width: 768px) {
+       .game-req-table-container{
+           padding: 0.5rem;
+       }
+   }
 /* ending page 4 */
 
 /* opening page 5 */
