@@ -44,21 +44,21 @@ html{
     font-size: 1.2rem;
     width: 99.9%;
     font-weight: bold;
-    border: 4px solid green;
+
 }
 
 .logo{
     font-weight: bold;
     font-size: 2.4rem;
     width: 30%;
-    border: 4px solid black;
+
 }
 
 .menu{
     display: flex;
     justify-content: space-evenly;
     width: 50%;
-    border: 4px solid red;
+
 }
 
 .menu a{
@@ -70,7 +70,7 @@ html{
     display: flex;
     justify-content: space-evenly;
     width: 20%;
-    border: 4px solid blue;
+
     
 }
 
@@ -116,7 +116,7 @@ html{
 .playnow{
     text-align: center;
     font-family: var(--font-primary);
-    border: 4px solid red;
+
 
 }
  
@@ -193,7 +193,7 @@ html{
     justify-content: center;
     margin-right: 1rem;
     text-align: center;
-    border: 4px solid red;
+
 }
 
 .gametext p{
@@ -210,57 +210,6 @@ html{
 #carouselExampleIndicators{
     width: 100rem;
 }
-
-
-/* .banner-game{
-    border: 4px solid red;
-}
-
-.banner-indicator{
-    display: flex; 
-    justify-content: center;
-    align-items: flex-end;
-    z-index: 2;
-}
-
-.prev-banner{
-    height: 5rem;
-    width: 3.5rem;
-    opacity: 0.8;
-    display: flex;
-    bottom: 19rem;
-    left: 0px;
-    z-index: 1;
-    background-color: transparent;
-    margin-left: -4.5rem;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-.prev-banner img {
-    height:auto;
-    width: 100%;
-    
-}
-
-.next-banner{
-    height: 50px;
-    width: 35px;
-    opacity: 0.8;
-    display: flex;
-    bottom: 190px;
-    right: 0px;
-    z-index: 1;
-    background-color: transparent;
-    margin-right: -40px;
-    justify-content: flex-end;
-    align-items: flex-end;
-    
-}
-.next-banner img{
-    height:auto;
-    width: 100%;
-    
-} */
 
 /* mobile screen size */
 @media (max-width: 768px){
@@ -338,7 +287,7 @@ p{
      display:flex;
      height: 100%;
      width: 50%;
-     border: 3px solid blue;
+
 }
 
 .game-feature-content-header{
@@ -384,7 +333,6 @@ p{
     height: 2.5rem;
     right: -1.7rem;
     background-color: white;
-    border: 0.4rem solid #FF9F55;
     top: 1.5rem;
     border-radius: 50%;
     z-index: 1;
@@ -411,14 +359,20 @@ p{
 
 @media screen and (max-width: 320px) {
     .container {
-        padding: 1rem 2rem;
+        padding: 1rem 2grem;
         position: relative;
         
       }
-
     p{
         word-wrap: break-word;
         max-width: 60vw;
+    }
+}
+
+@media (min-width: 768px) and (max-width:1024px){
+    p{
+        word-wrap: break-word;
+        max-width: 35vw;
     }
 }
 
@@ -440,7 +394,6 @@ p{
 }
 .game-req-header{
     width: 100%;
-    border: 3px solid yellowgreen;
     text-align: center;
     font-size: var(--font-size-content);
     color: var(--color-primary);
@@ -459,7 +412,8 @@ p{
     width: 50%;
     align-items: center;
     justify-content: center;
-    border: 3px solid brown;
+    margin-left: 1rem;
+
 }
 
 .game-req-content h2{
@@ -470,16 +424,17 @@ p{
 .game-req-empty{
     display:flex;
     width: 50%;
-    border: 3px solid yellow;
+
 }
 
 .game-req-table-container{
-   
     display:grid;
     grid:auto auto auto / auto auto;
     padding: 0.5rem;
     font-family: var(--font-primary);
     border: 3px solid violet;
+
+ 
 }
 
 .game-req-table-container > div {
@@ -527,14 +482,13 @@ p{
             flex:80%;
             width: 100%;
             height: auto;
+            padding: 0.5rem;
         }
    }
 
-   @media screen and (max-width: 768px) {
-       .game-req-table-container{
-           padding: 0.5rem;
-       }
-   }
+
+
+ 
 /* ending page 4 */
 
 /* opening page 5 */
@@ -546,10 +500,67 @@ p{
     background-size: cover ;
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     color: white;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-content);
+}
 
+.top-score-left{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.top-score-left h2 {
+    font-family: var(--font-header);
+    font-size: var(--font-size-head1);
+}
+
+.top-score-right{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+}
+
+.review{
+    display: flex;
+    width: 100%;
+    height: 33vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bubble{
+    height: auto;
+    width: 50%;
+    background-color: gray;
+    border-radius: 1rem;
+}
+
+.bubble > p {
+     margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .top-score{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .top-score-left{
+        width: 100%;
+        height: auto;
+    }
+    .top-score-right{
+        width: 100%;
+        height: auto;
+    }
 
 }
 /* ending page 5 */
@@ -568,5 +579,37 @@ p{
     flex-direction: column;
     justify-content: space-between;
     color: white;
+    font-size: var(--font-size-content);
+    font-family: var(--font-primary);
 }
+
+.news{
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+}
+
+.news-pic{
+    background: url(assets/skull.png) no-repeat center center;
+    opacity: 0.65;
+    width: 50%;
+    height: auto;
+}
+
+.news-content{
+
+    width: 50%;
+}
+
+
+.footer{
+    height: 20%;
+}
+
+@media screen and (max-width: 768px) {
+    .news-pic{
+            align-items: center                                                     ;
+    }
+}
+
 /* ending page 6 */
