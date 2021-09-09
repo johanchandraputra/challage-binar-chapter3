@@ -44,7 +44,6 @@ html{
     font-size: 1.2rem;
     width: 99.9%;
     font-weight: bold;
-
 }
 
 .logo{
@@ -65,6 +64,7 @@ html{
     text-decoration: none;
 
 }
+
 
 .login{
     display: flex;
@@ -132,6 +132,12 @@ html{
     font-family: var(--font-header);
 }
 
+.playnow a{
+    text-decoration: none;
+    color: var(--color-secondary);
+}
+
+
 .btn-style{
     padding: 2rem 6rem;
     border-radius: 5px;
@@ -144,8 +150,9 @@ html{
 .btn-color{
     background-color: var(--color-button);
     color: var(--color-secondary);
-    
 }
+
+
 
 .story{
     text-align: center;
@@ -613,3 +620,94 @@ p{
 }
 
 /* ending page 6 */
+
+
+/* ----------------------------------------------------- */
+
+/* gameRPS */
+
+.wrapper-rps{
+    background-color:#9C835F;
+    height: 97vh;
+}
+
+.header-rps{
+    padding: 2rem 2rem;
+    height: 10vh;
+}
+
+.backbutton img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.backbutton{
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.logo-rps img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.2rem;
+
+}
+.logo-rps{
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.title-rps{
+    display: inline-block;
+    font-family: var(--font-primary);
+    font-size: 3.6rem;
+    font-weight: 700;
+    align-items: center;
+    color:#F9B23D;
+}
+
+.player-com{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 3rem;
+}
+.player-com p{
+    align-items: center;
+}
+
+.choice img{
+    width: 10rem;
+    height: 10rem;
+}
+.choices{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 70vh;
+    align-items: center;
+}
+
+.choice{
+    padding: 3rem 3rem;
+}
+
+.result-middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 70vh;
+    align-items: center;
+}
+
+.result-rps img{
+    height: 5rem;
+    width: 10rem;
+}
+
+.refresh-rps img{
+    height: 2rem;
+    width: 2rem;
+}
