@@ -679,8 +679,8 @@ p{
 }
 
 .choice img{
-    width: 10rem;
-    height: 10rem;
+    width: 12rem;
+    height: 12rem;
 }
 .choices{
     display: flex;
@@ -699,15 +699,18 @@ p{
     flex-direction: column;
     justify-content: space-evenly;
     height: 70vh;
-    align-items: center;
+    align-items: center; 
 }
 
-.result-rps img{
-    height: 5rem;
-    width: 10rem;
+.result-rps{
+    letter-spacing: 1rem;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    color: #BD0000;
+    font-size: 14.4rem;
 }
 
 .refresh-rps img{
-    height: 2rem;
-    width: 2rem;
+    height: 6.5rem;
+    width: 6.5rem;
 }
