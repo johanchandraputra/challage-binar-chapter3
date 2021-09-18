@@ -38,19 +38,13 @@ function play(playerchoice){
     if(comRandom == ROCK)
     {
         combtnRock.classList.add("choice-marker");
-        combtnPaper.classList.remove("choice-marker");
-        combtnScissors.classList.remove("choice-marker");
     }
     else if(comRandom == PAPER)
     {
-        combtnRock.classList.remove("choice-marker");
         combtnPaper.classList.add("choice-marker");
-        combtnScissors.classList.remove("choice-marker");
     }
     else if(comRandom == SCISSORS)
     {
-        combtnRock.classList.remove("choice-marker");
-        combtnPaper.classList.remove("choice-marker");
         combtnScissors.classList.add("choice-marker");
     }
     
