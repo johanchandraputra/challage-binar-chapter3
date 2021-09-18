@@ -123,7 +123,7 @@ function main(){
         play(SCISSORS);
         disableButton();
     });
-    REFRESH.addEventListener("click", () => {
+    REFRESH.addEventListener("click", function() {
         refreshbutton();
         enableButton();
     });
