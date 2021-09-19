@@ -628,7 +628,7 @@ p{
 
 .wrapper-rps{
     background-color:#9C835F;
-    height: 97vh;
+    height: 99vh;
 }
 
 .header-rps{
@@ -682,6 +682,7 @@ p{
     width: 12rem;
     height: 12rem;
 }
+
 .choices{
     display: flex;
     flex-direction: row;
@@ -742,4 +743,56 @@ p{
 .disabled{
     pointer-events: none;
     cursor: not-allowed;
+}
+
+
+@media (min-width: 768px){
+    .wrapper-rps{
+        height: 120vh;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 767px){
+    .wrapper-rps{
+        height: 120vh;
+    }
+    .player-com{
+        margin-top: 6rem;
+        font-size: 2.5rem;
+    }
+    .choice img{
+        width: 8rem;
+        height: 8rem;
+    }
+    .refresh-rps img{
+        height: 3rem;
+        width: 3rem;
+    }
+    .result-rps{
+        font-size: 6rem;
+    }
+    .result-rps-change{
+        font-size: 6rem;
+    }
+}
+@media screen and (max-width: 320px){
+    .player-com{
+        margin-top: 4rem;
+        font-size: 2.5rem;
+    }
+    .choice img{
+        width: 5rem;
+        height: 5rem;
+    }
+    .refresh-rps img{
+        height: 3rem;
+        width: 3rem;
+    }
+    .result-rps{
+        font-size: 5rem;
+    }
+    .result-rps-change{
+        font-size: 5rem;
+    }
+    
 }
