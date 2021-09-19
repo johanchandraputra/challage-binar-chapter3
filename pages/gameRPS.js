@@ -11,79 +11,82 @@ const ROCK = "rock";
 const PAPER = "paper";
 const SCISSORS = "scissors";
 
+
+// initial result 
 RESULT.innerHTML = "VS";
 
-function randomanswer()
-{
+//function random for computer choice
+function randomAnswer() {
     var ans = new Array(ROCK, PAPER, SCISSORS);
-    var randomm = Math.floor(Math.random()*ans.length);
+    var randomm = Math.floor(Math.random() * ans.length);
     return ans[randomm];
 }
 
-function play(playerchoice){
-    let comRandom = randomanswer();
-    if(playerchoice == ROCK)
-    {
+//function case if player win, lose , draw and marker player and computer choice
+function play(playerchoice) {
+    let comRandom = randomAnswer();
+
+    //marker player choice
+    if (playerchoice == ROCK) {
         playerbtnRock.classList.add("choice-marker");
     }
-    else if(playerchoice == PAPER)
-    {
+    else if (playerchoice == PAPER) {
         playerbtnPaper.classList.add("choice-marker");
     }
-    else if(playerchoice == SCISSORS)
-    {
+    else if (playerchoice == SCISSORS) {
         playerbtnScissors.classList.add("choice-marker");
     }
 
-    if(comRandom == ROCK)
-    {
+    //to marker computer choice
+    if (comRandom == ROCK) {
         combtnRock.classList.add("choice-marker");
     }
-    else if(comRandom == PAPER)
-    {
+    else if (comRandom == PAPER) {
         combtnPaper.classList.add("choice-marker");
     }
-    else if(comRandom == SCISSORS)
-    {
+    else if (comRandom == SCISSORS) {
         combtnScissors.classList.add("choice-marker");
     }
-    
-    switch(playerchoice+comRandom){
-        case ROCK+SCISSORS:
-        case PAPER+ROCK:
-        case SCISSORS+PAPER:
-            win();
+
+    //combine between player choice and computer choice to make CASE
+    switch (playerchoice + comRandom) {
+        case ROCK + SCISSORS:
+        case PAPER + ROCK:
+        case SCISSORS + PAPER:
+            win(); // running this function if player win
             break;
-        case ROCK+PAPER:
-        case PAPER+SCISSORS:
-        case SCISSORS+ROCK:
-            lose();
+        case ROCK + PAPER:
+        case PAPER + SCISSORS:
+        case SCISSORS + ROCK:
+            lose(); // running this function if player lose
             break;
-        case ROCK+ROCK:
-        case PAPER+PAPER:
-        case SCISSORS+SCISSORS:
-            draw();
+        case ROCK + ROCK:
+        case PAPER + PAPER:
+        case SCISSORS + SCISSORS:
+            draw(); // running this function player draw
             break;
     }
 }
-
-function win(){
-    RESULT.innerHTML="PLAYER WIN";
+// if player win , this function actived and add class to modify css
+function win() {
+    RESULT.innerHTML = "PLAYER WIN";
+    RESULT.classList.add("result-rps-change");
+}
+// if player lose , this function actived and add class to modify css
+function lose() {
+    RESULT.innerHTML = "COM WIN";
+    RESULT.classList.add("result-rps-change");
+}
+// if player draw , this function actived and add class to modify css
+function draw() {
+    RESULT.innerHTML = "DRAW";
     RESULT.classList.add("result-rps-change");
 
 }
-function lose(){
-    RESULT.innerHTML="PLAYER LOSE";
-    RESULT.classList.add("result-rps-change");
 
-}
-function draw(){
-    RESULT.innerHTML="DRAW";
-    RESULT.classList.add("result-rps-change");
-
-}
-function refreshbutton(){
-    RESULT.innerHTML="VS";
+//refresh button will remove marker where player and computer choice , also reset result to beginning
+function refreshbutton() {
+    RESULT.innerHTML = "VS";
     RESULT.classList.remove("result-rps-change");
     combtnRock.classList.remove("choice-marker");
     combtnPaper.classList.remove("choice-marker");
@@ -93,36 +96,42 @@ function refreshbutton(){
     playerbtnScissors.classList.remove("choice-marker");
 }
 
-function enableButton(){
+//to enable cursor and pointer event
+function enableButton() {
     playerbtnRock.classList.remove("disabled");
     playerbtnPaper.classList.remove("disabled");
     playerbtnScissors.classList.remove("disabled");
 }
-function disableButton(){
+
+//to disable cursor and pointer event
+function disableButton() {
     playerbtnRock.classList.add("disabled");
     playerbtnPaper.classList.add("disabled");
     playerbtnScissors.classList.add("disabled");
 }
 
-function main(){
-    playerbtnRock.addEventListener("click", function(){
+//function where if player clicked a choice between rock / paper / scisscors  this function will running
+function main() {
+    playerbtnRock.addEventListener("click", function () {
         play(ROCK);
         disableButton();
     });
-    playerbtnPaper.addEventListener("click", function(){
+    playerbtnPaper.addEventListener("click", function () {
         play(PAPER);
         disableButton();
     });
-    playerbtnScissors.addEventListener("click", function(){
+    playerbtnScissors.addEventListener("click", function () {
         play(SCISSORS);
         disableButton();
     });
-    REFRESH.addEventListener("click", function() {
+    REFRESH.addEventListener("click", function () {
         refreshbutton();
         enableButton();
     });
 }
 
+
+//to running function main
 main();
 
 
