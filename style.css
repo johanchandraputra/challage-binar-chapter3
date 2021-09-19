@@ -800,6 +800,8 @@ p{
     }
     .choices{
         flex-direction: column-reverse;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
     }
     .choice-left{
         display: inherit;
