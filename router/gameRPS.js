@@ -1,0 +1,8 @@
+const express = require("express");
+const router = express.Router();
+
+router.get("/gameRPS", (req, res) =>{
+    res.render("gameRPS");
+});
+
+module.exports = router;
