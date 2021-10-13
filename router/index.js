@@ -5,4 +5,9 @@ router.get("/", (req, res) =>{
     res.render("index");
 });
 
+router.get("/gameRPS", (req, res) =>{
+    res.render("gameRPS");
+});
+
+
 module.exports = router;
